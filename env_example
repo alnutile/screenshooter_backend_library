@@ -1,0 +1,4 @@
+S3_KEY=foo
+S3_SECRET=bar
+S3_BUCKET=foo_bar
+S3_REGION=foo_bar2
