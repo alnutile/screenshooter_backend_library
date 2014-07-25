@@ -27,12 +27,28 @@ trait AmazonTraits {
         $this->secret   = $_ENV['S3_SECRET'];
         $this->region   = $_ENV['S3_REGION'];
         $this->setConfig();
+
     }
 
+    /**
+     * @param $config
+     * @return Aws
+     */
     public function aws_factory($config)
     {
         return Aws::factory($config);
     }
+
+    /**
+     * @param $config
+     * @return mixed
+     */
+    public function s3_client($config)
+    {
+        $aws = $this->aws_factory($config);
+        return $aws->get('S3');;
+    }
+
 
     /**
      * @param mixed $bucket
