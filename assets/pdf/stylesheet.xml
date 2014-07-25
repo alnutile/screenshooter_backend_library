@@ -1,0 +1,8 @@
+<!-- stylesheet.xml file -->
+<stylesheet>
+    <h2 color="header-color"/>
+    <hr background-color="line-color"/>
+    <table>
+        <td border-color="line-color"/>
+    </table>
+</stylesheet>

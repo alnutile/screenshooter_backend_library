@@ -1,0 +1,42 @@
+<!-- document.xml file -->
+<pdf>
+
+    <dynamic-page>
+        <placeholders>
+            <header>
+                <div height="50px" width="100%">
+                    Header
+
+                    <!-- when we would like to number from 2 -->
+                    <page-info offset="0" format="page %s for %s"/>
+
+                </div>
+            </header>
+
+            <footer>
+                <div height="50px" width="100%">
+                    Footer
+                </div>
+            </footer>
+
+            <watermark>
+                <!-- rotate can have absolute values (45deg - in degrees, 0.123 - in radians) or relative values ("diagonally" and "-diagonally" - angle between diagonal and base side of the page) -->
+                <div rotate="diagonally" alpha="0.1">
+                    <img src="https://packagist.org/bundles/packagistweb/img/logo.png" />
+                </div>
+            </watermark>
+
+        </placeholders>
+
+
+        Hello {{ name }}!
+
+        <h1>Members</h1>
+        <ul>
+            {% for user in users %}
+            <li>{{ user.username }}</li>
+            {% endfor %}
+        </ul>
+    </dynamic-page>
+
+</pdf>

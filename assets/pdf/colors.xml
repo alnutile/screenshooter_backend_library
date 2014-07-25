@@ -1,0 +1,5 @@
+<!-- colors.xml file -->
+<colors>
+    <color name="header-color" hex="#333333" />
+    <color name="line-color" hex="#eeeeee" />
+</colors>
