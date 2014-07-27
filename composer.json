@@ -19,10 +19,14 @@
         "league/fractal": "0.9.*",
         "aws/aws-sdk-php": "2.*",
         "cuab/phpcrawl" : "0.8.*",
-        "nesbot/carbon": "dev-master",
+
         "flowjs/flow-php-server": "dev-master",
         "psliwa/php-pdf": "dev-master",
-        "twig/twig":"1.*"
+        "twig/twig":"1.*",
+
+
+        "pda/pheanstalk": "~2.1",
+        "illuminate/queue" : "4.2.*"
 
     },
     "require-dev": {
