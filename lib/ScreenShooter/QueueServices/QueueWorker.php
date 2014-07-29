@@ -11,6 +11,8 @@ namespace ScreenShooter\QueueServices;
 use ScreenShooter\QueueServices\Traits\LaravelQueueTraits;
 use \Illuminate\Queue\Capsule\Manager as Queue;
 
+
+
 class QueueWorker
 {
     use LaravelQueueTraits;
@@ -18,6 +20,7 @@ class QueueWorker
     public function run()
     {
 
+        //../../bootstrap.php
         $oldtime = microtime();
 
         while (true) {

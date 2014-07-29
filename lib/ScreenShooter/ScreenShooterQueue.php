@@ -63,10 +63,12 @@ class ScreenShooterQueue
         $instance = QueueFactory::Instance();
 
 
-        for ($x = 0; $x <= 10; $x++) {
-            Queue::push('\ScreenShooter\QueueServices\Jobs\DummyHandler', array('index' => $x));
-        }
+//        for ($x = 0; $x <= 10; $x++) {
+//            Queue::push('\ScreenShooter\QueueServices\Jobs\DummyHandler', array('index' => $x));
+//        }
 
+
+        Queue::push('\ScreenShooter\QueueServices\Jobs\DummyHandler', array('index' => $x));
 
         return true;
 

@@ -12,4 +12,4 @@ use  ScreenShooter\QueueServices\QueueWorker;
 
 
 $worker = new QueueWorker();
-$worker ->run();
+$worker->run();
