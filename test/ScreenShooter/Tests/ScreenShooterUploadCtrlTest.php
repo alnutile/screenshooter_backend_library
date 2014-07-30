@@ -11,7 +11,7 @@ namespace ScreenShooter\Tests;
 use ScreenShooter\ScreenShooterUploadCtrl;
 use Dotenv;
 
-\Dotenv::load(__DIR__.'/../../');
+\Dotenv::load(__DIR__.'/../../../');
 
 class ScreenShooterUploadCtrlTest extends Base {
 

@@ -1,6 +1,14 @@
 <?php
 
+date_default_timezone_set('America/Los_Angeles');
 require_once __DIR__.'/../../vendor/autoload.php';
+require_once __DIR__ .'/../../config/database.php';
+
+
+//use Dotenv;
+
+\Dotenv::load(__DIR__.'/../../');
+
 
 $app = new Silex\Application();
 $app['debug'] = true;
@@ -22,8 +30,44 @@ $current_user = [
     'uuid' => 'foo-bar-foo2-bar'
 ];
 
-$app->get('/users', function () use ($app, $current_user) {
-    return $app->json($current_user);
+$app->get('/', function() use ($app) {
+    return $app->json("You are here");
 });
 
+//$app->get('/users', function () use ($app, $current_user) {
+//    return $app->json($current_user);
+//});
+
+
+use ScreenShooter\Models\Site;
+
+
+
+$app->get('/sites', function() use ($app){
+    $sites = Site::all();
+    return $app->json($sites);
+});
+
+$app->get('/sites/{id}', function($id) use ($app){
+    $site = Site::findOrFail($id);
+    return $app->json($site->first());
+});
+
+
+use ScreenShooter\QueueServices\Jobs\UploadToS3Job;
+
+$app->get('/upload', function () use ($app) {
+
+
+    $job = new UploadToS3Job();
+
+    $job->fire(null,array());
+
+    return $app->json('OK');
+});
+
+
 $app->run();
+
+
+
