@@ -13,14 +13,14 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 class Pdf extends Eloquent
 {
 
-    protected $fillable = ['name', 'sitemap_id', 'user_uuid'];
+    protected $fillable = ['name', 'sitemap_id', 'user_uuid' ,'status'];
 
 
     public $timestamps = true;
 
     public function sitemap()
     {
-        return $this->belongsTo('Sitemap');
+        return $this->belongsTo('ScreenShooter\Models\Sitemap');
     }
 
 }

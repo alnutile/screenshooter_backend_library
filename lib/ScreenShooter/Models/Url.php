@@ -20,17 +20,17 @@ class Url extends Eloquent
 
     public function sitemap()
     {
-        return $this->belongsTo('Sitemap');
+        return $this->belongsTo('ScreenShooter\Models\Sitemap');
     }
 
     public function jobTypes()
     {
-        return $this->hasMany('JobType');
+        return $this->hasMany('ScreenShooter\Models\JobType');
     }
 
     public function jobAsset()
     {
-        return $this->hasMany('JobAsset');
+        return $this->hasMany('ScreenShooter\Models\JobAsset');
     }
 
 }

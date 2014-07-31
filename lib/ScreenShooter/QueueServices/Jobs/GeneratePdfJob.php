@@ -12,6 +12,7 @@ use ScreenShooter\ScreenShooterS3Service;
 use ScreenShooter\S3\KeyFactory;
 use ScreenShooter\Models\Pdf;
 use ScreenShooter\S3\Status;
+use ScreenShooter\Models\Sitemap;
 
 class GeneratePdfJob
 {
@@ -42,9 +43,25 @@ class GeneratePdfJob
         $site_id = $message['site_id'];
         $sitemap_id = $message['sitemap_id'];
 
+
+        $message['name']='PDF export';
         $message['status'] = Status::STATUS_PROCESSING;
 
+        var_dump($message);
+
         $pdf = Pdf::create($message);
+
+        $sitemap = Sitemap::find($site_id);
+
+        $urls =$sitemap->urls;
+
+
+        foreach ($urls as &$url)
+        {
+            var_dump($url);
+        }
+
+
 
 
     }

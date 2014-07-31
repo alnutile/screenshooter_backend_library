@@ -20,12 +20,12 @@ class ScreenshooterJob extends Eloquent
 
     public function sitemap()
     {
-        return $this->belongsTo('Sitemap');
+        return $this->belongsTo('ScreenShooter\Models\Sitemap');
     }
 
     public function jobAsset()
     {
-        return $this->hasMany('JobAsset');
+        return $this->hasMany('ScreenShooter\Models\JobAsset');
     }
 
 }

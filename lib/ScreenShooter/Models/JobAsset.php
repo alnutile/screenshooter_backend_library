@@ -20,12 +20,12 @@ class JobAsset extends Eloquent
 
     public function url()
     {
-        return $this->belongsTo('Url');
+        return $this->belongsTo('ScreenShooter\Models\Url');
     }
 
     public function screenshooterJob()
     {
-        return $this->belongsTo('ScreenshooterJob');
+        return $this->belongsTo('ScreenShooter\Models\ScreenshooterJob');
     }
 
 }

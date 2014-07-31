@@ -21,7 +21,7 @@ class Sitemap extends Eloquent
 
     public function urls()
     {
-        return $this->hasMany('Url');
+        return $this->hasMany('ScreenShooter\Models\Url');
     }
 
     public function site()
@@ -31,7 +31,12 @@ class Sitemap extends Eloquent
 
     public function screenshooterJobs()
     {
-        return $this->hasMany('ScreenshooterJob');
+        return $this->hasMany('ScreenShooter\Models\ScreenshooterJob');
+    }
+
+    public function pdfs()
+    {
+        return $this->hasMany('ScreenShooter\Models\Pdf');
     }
 
 

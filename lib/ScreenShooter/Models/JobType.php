@@ -20,7 +20,7 @@ class JobType extends Eloquent
 
     public function url()
     {
-        return $this->belongsTo('Url');
+        return $this->belongsTo('ScreenShooter\Models\Url');
     }
 
 }
