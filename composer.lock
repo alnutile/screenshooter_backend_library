@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22d3d7db5f55995e8d5f0e32ba72a438",
+    "hash": "f2e8772c3ca37fe8b15f8ccc6c3308cb",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -891,6 +891,74 @@
             "time": "2014-07-06 16:48:26"
         },
         {
+            "name": "monolog/monolog",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "25b16e801979098cb2f120e697bfce454b18bf23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/25b16e801979098cb2f120e697bfce454b18bf23",
+                "reference": "25b16e801979098cb2f120e697bfce454b18bf23",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "phpunit/phpunit": "~3.7.0",
+                "raven/raven": "~0.5",
+                "ruflin/elastica": "0.90.*"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.10.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2014-06-04 16:30:04"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "1.10.0",
             "source": {
@@ -1698,6 +1766,66 @@
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
             "time": "2014-07-15 15:39:46"
+        },
+        {
+            "name": "symfony/monolog-bridge",
+            "version": "v2.5.2",
+            "target-dir": "Symfony/Bridge/Monolog",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/MonologBridge.git",
+                "reference": "e094d6ad0b0f1c395384cd3404a5a75fe5455308"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/MonologBridge/zipball/e094d6ad0b0f1c395384cd3404a5a75fe5455308",
+                "reference": "e094d6ad0b0f1c395384cd3404a5a75fe5455308",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "~1.3",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/console": "~2.3",
+                "symfony/event-dispatcher": "~2.2",
+                "symfony/http-kernel": "~2.2"
+            },
+            "suggest": {
+                "symfony/console": "For the possibility to show log messages in console commands depending on verbosity settings. You need version ~2.3 of the console for it.",
+                "symfony/event-dispatcher": "Needed when using log messages in console commands",
+                "symfony/http-kernel": "For using the debugging handlers together with the response life cycle of the HTTP kernel."
+            },
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Bridge\\Monolog\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Monolog Bridge",
+            "homepage": "http://symfony.com",
+            "time": "2014-07-09 09:05:48"
         },
         {
             "name": "symfony/process",
